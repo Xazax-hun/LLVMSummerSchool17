@@ -55,6 +55,12 @@ The module should be misc and the name should be enum-out-of-range
 After generating the template for the new check, you should apply 
 clang-tools-extra.patch to get the test cases for your assignment. 
 
+To apply the patch go to clang-tools-extra source directory:
+
+```
+patch -p1 < clang-tools-extra.patch
+```
+
 You can run the test-cases using:
 
 ```
@@ -98,6 +104,17 @@ develop a check for enum out of bound assignments!
 
 Apply clang.patch on top of clang to get the template for the check and fill
 in the stubs.
+
+When you are in the clang source directory:
+
+```
+patch -p1 < clang.patch
+```
+
+You can run tests the following way:
+```
+ninja check-clang
+```
 
 # Dynamic Analysis
 
