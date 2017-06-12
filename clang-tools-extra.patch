@@ -1,0 +1,24 @@
+diff --git a/test/clang-tidy/misc-enum-out-of-range.cpp b/test/clang-tidy/misc-enum-out-of-range.cpp
+index 70a8f6ad..a18a8355 100644
+--- a/test/clang-tidy/misc-enum-out-of-range.cpp
++++ b/test/clang-tidy/misc-enum-out-of-range.cpp
+@@ -1,14 +1,9 @@
+ // RUN: %check_clang_tidy %s misc-enum-out-of-range %t
+ 
+-// FIXME: Add something that triggers the check here.
+-void f();
+-// CHECK-MESSAGES: :[[@LINE-1]]:6: warning: function 'f' is insufficiently awesome [misc-enum-out-of-range]
++enum A { a, b, c };
+ 
+-// FIXME: Verify the applied fix.
+-//   * Make the CHECK patterns specific enough and try to make verified lines
+-//     unique to avoid incorrect matches.
+-//   * Use {{}} for regular expressions.
+-// CHECK-FIXES: {{^}}void awesome_f();{{$}}
++void f() {
++  A a = (A)5; // Undefined!
++  // CHECK-MESSAGES: warning: enum out of range assignment
++}
+ 
+-// FIXME: Add something that doesn't trigger the check here.
+-void awesome_f2();

@@ -21,7 +21,7 @@ an enum.
 enum A { a, b, c };
 
 void f() {
-  A a = 5; // Undefined!
+  A a = (A)5; // Undefined!
 }
 
 ```
@@ -51,6 +51,10 @@ a new check:
 http://clang.llvm.org/extra/clang-tidy/#writing-a-clang-tidy-check
 
 The module should be misc and the name should be enum-out-of-range
+```
+cd clang-tidy
+python2 add_new_check.py misc enum-out-of-range
+```
 
 After generating the template for the new check, you should apply 
 clang-tools-extra.patch to get the test cases for your assignment. 
