@@ -70,6 +70,8 @@ You can run the test-cases using:
 ```
 ninja check-clang-tools
 ```
+Hint: to get started look at the AST dump and the ASTMatcher reference. 
+
 
 ## Optional Extension
 
@@ -84,7 +86,7 @@ For example, transform the following code:
 enum A { a, b, c };
 
 void f(int i) {
-  A a = i; 
+  A a = (A)i; 
 }
 ```
 
@@ -94,7 +96,7 @@ To:
 enum A { a, b, c };
 
 void f(int i) {
-  A a = ((i >= 0 && i < 3)?i:( __builtin_trap(),0)); 
+  A a = (A)((i >= 0 && i < 3)?i:( __builtin_trap(),0)); 
 }
 ```
 
