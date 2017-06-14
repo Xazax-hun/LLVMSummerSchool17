@@ -3,7 +3,7 @@
 You can use the following build script to set up your development
 environment: https://goo.gl/cieeWh
 
-Note that, if you are working on lab machines the script already run
+Note that, if you are working on lab machines the script is already run
 for you. 
 
 In this repository, you will find the instructions and also some 
