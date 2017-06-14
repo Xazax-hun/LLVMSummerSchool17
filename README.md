@@ -59,7 +59,7 @@ python2 add_new_check.py misc enum-out-of-range
 After generating the template for the new check, you should apply 
 clang-tools-extra.patch to get the test cases for your assignment. 
 
-To apply the patch go to clang-tools-extra source directory:
+To apply the patch go to extra source directory:
 
 ```
 patch -p1 < clang-tools-extra.patch
