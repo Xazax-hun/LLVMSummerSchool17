@@ -68,7 +68,7 @@ patch -p1 < clang-tools-extra.patch
 You can run the test-cases using:
 
 ```
-ninja check-clang-tools
+make check-clang-tools
 ```
 Hint: to get started look at the AST dump and the ASTMatcher reference. 
 
@@ -119,7 +119,7 @@ patch -p1 < clang.patch
 
 You can run tests the following way:
 ```
-ninja check-clang
+make check-clang
 ```
 
 # Dynamic Analysis
