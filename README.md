@@ -127,3 +127,5 @@ ninja check-clang
 Static Analyzer is not guaranteed to find all the problems and might also
 give you false positives. Write an instrumentation pass to detect out of
 range assignments for enums at runtime.
+
+More details here: https://github.com/hfinkel/llvm-ss-2017
